@@ -3,169 +3,365 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohit Kumar Verma | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            line-height: 1.6;
-            text-align: center;
-        }
-        header {
-            padding: 50px;
-            background: #161b22;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            position: relative;
-            animation: fadeIn 1s ease-in-out;
-        }
-        header h1 {
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            color: #58a6ff;
-        }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #58a6ff;
-            margin-top: 20px;
-            animation: slideIn 1s ease-in-out;
-        }
-        section {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #161b22;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            animation: fadeInUp 1s ease-in-out;
-            text-align: left;
-        }
-        h2 {
-            border-bottom: 2px solid #58a6ff;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .project {
-            background: #21262d;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .project:hover {
-            transform: scale(1.05);
-        }
-        .skills p {
-            background: #21262d;
-            padding: 10px;
-            display: inline-block;
-            border-radius: 5px;
-            margin: 5px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #161b22;
-            margin-top: 50px;
-        }
-        ul {
-            padding-left: 40px;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        .contact-icons a {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: #58a6ff;
-            margin: 10px 0;
-        }
-        .contact-icons i {
-            font-size: 1.5rem;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes fadeInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-    </style>
+    <meta name="description" content="Mohit Kumar Verma - Experienced Software Engineer specializing in scalable backend systems and cloud solutions.">
+    <title>Mohit Kumar Verma | Software Engineer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-theme="dark">
+
     <header>
-        <h1>Mohit Kumar Verma</h1>
-        <p>Software Engineer | 10+ Years Experience</p>
-        <img src="images/profile.jpg" alt="Mohit Kumar Verma" class="profile-img">
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">MKV</a>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-controls">
+                     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Experienced Software Developer specializing in scalable architectures, backend systems, and cloud solutions. Passionate about coding, problem-solving, and mentoring.</p>
-    </section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project Name</h3>
-            <p>Brief description of the project. <a href="#">View Project</a></p>
-        </div>
-        <div class="project">
-            <h3>Another Project</h3>
-            <p>Details about another important project. <a href="#">View Project</a></p>
-        </div>
-    </section>
-    
-    <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>Amazon - SDE 2</strong> (2021 - Present)</li>
-            <li><strong>Previous Companies</strong> (Details of past roles)</li>
-        </ul>
-    </section>
-    
-    <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <p>Python</p>
-        <p>Java</p>
-        <p>Flutter</p>
-        <p>Firebase</p>
-        <p>Cloud Computing</p>
-        <p>WebRTC</p>
-        <p>System Design</p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-icons">
-            <a href="mailto:mohitkumar@example.com"><i class="fas fa-envelope"></i> mohitkumar@example.com</a>
-            <a href="https://github.com/mohitkumar" target="_blank"><i class="fab fa-github"></i> github.com/mohitkumar</a>
-            <a href="https://linkedin.com/in/mohitkumar" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/mohitkumar</a>
-        </div>
-    </section>
-    
+
+    <main>
+        <section class="hero" id="home" aria-labelledby="hero-heading">
+            <div class="container hero-grid">
+                 <div class="hero-content animate">
+                    <h1 id="hero-heading">Mohit Kumar Verma</h1>
+                    <p class="tagline">Software Engineer | Problem Solver | Architect</p>
+                    <p class="intro">Experienced Software Engineer with 10+ years building scalable architectures, backend systems, and cloud solutions.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/mohitkumar" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/mohitkumar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:mohitkumar@example.com" aria-label="Send Email"><i class="fas fa-envelope"></i></a>
+                        <a href="resume.pdf" download aria-label="Download Resume"><i class="fas fa-file-download"></i></a>
+                    </div>
+                </div>
+                <div class="hero-img animate delay-1">
+                    <img src="../images/profile.jpg" alt="Professional headshot of Mohit Kumar Verma">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about" aria-labelledby="about-heading">
+            <div class="container">
+                <h2 id="about-heading" class="animate">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text animate delay-1">
+                        <p>I am a passionate software developer with over a decade of experience designing and implementing high-performance applications. My expertise spans across backend development, cloud architecture, and system design.</p>
+                        <p>Throughout my career, I've consistently focused on creating scalable solutions that solve real business problems. I enjoy the process of breaking down complex challenges into manageable components and building elegant systems that can evolve with changing requirements.</p>
+                        <p>Beyond coding, I'm an active technical mentor who enjoys helping others grow in their software development journey. I believe in continuous learning and regularly explore new technologies to expand my skill set.</p>
+                        <p>When I'm not coding, you'll find me exploring tech blogs, contributing to open-source projects, or enjoying the outdoors.</p>
+                    </div>
+                    <div class="about-stats animate delay-2">
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Delivered</span>
+                        </div>
+                         <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Technologies Mastered</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" aria-labelledby="experience-heading">
+            <div class="container">
+                <h2 id="experience-heading" class="animate">Professional Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item animate">
+                        <div class="timeline-content">
+                            <span class="timeline-date">2021 - Present</span>
+                            <h3 class="timeline-title">Software Development Engineer 2</h3>
+                            <p class="timeline-company">Amazon</p>
+                            <ul class="timeline-desc">
+                                <li>Led development of distributed systems processing millions of transactions daily.</li>
+                                <li>Achieved 40% reduction in service latency through architecture improvements.</li>
+                                <li>Designed and implemented scalable microservices using Java and AWS.</li>
+                                <li>Mentored junior engineers and improved team coding standards.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate delay-1">
+                        <div class="timeline-content">
+                            <span class="timeline-date">2018 - 2021</span>
+                            <h3 class="timeline-title">Senior Software Engineer</h3>
+                             <p class="timeline-company">Microsoft</p>
+                            <ul class="timeline-desc">
+                                <li>Developed cloud-based solutions for enterprise clients, focusing on security and scalability.</li>
+                                <li>Architected and implemented authentication services used by 10M+ users.</li>
+                                <li>Built robust APIs handling 500K requests per minute.</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="timeline-item animate delay-2">
+                        <div class="timeline-content">
+                            <span class="timeline-date">2015 - 2018</span>
+                            <h3 class="timeline-title">Full Stack Developer</h3>
+                             <p class="timeline-company">Google</p>
+                            <ul class="timeline-desc">
+                                <li>Worked on consumer-facing web applications using React and Node.js.</li>
+                                <li>Implemented CI/CD pipelines reducing deployment time by 60%.</li>
+                                <li>Optimized database queries resulting in 35% faster page loads.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <h2 id="projects-heading" class="animate">Featured Projects</h2>
+                <div class="projects-filter animate" role="group" aria-label="Filter projects by category">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                     <button class="filter-btn" data-filter="cloud">Cloud</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card animate" data-category="backend cloud">
+                        <img src="images/project1-placeholder.jpg" alt="Screenshot of Scalable Microservices Architecture" class="project-img">
+                        <div class="project-content">
+                            <h3>Scalable Microservices Architecture</h3>
+                            <p>Designed and implemented a fault-tolerant microservices architecture handling millions of requests per day with 99.99% uptime.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Kubernetes</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn project-link">View Project</a>
+                        </div>
+                    </article>
+                    <article class="project-card animate delay-1" data-category="mobile">
+                        <img src="images/project2-placeholder.jpg" alt="Screenshot of Cross-Platform Mobile App" class="project-img">
+                        <div class="project-content">
+                            <h3>Cross-Platform Mobile Application</h3>
+                            <p>Developed a feature-rich mobile application for iOS and Android with over 500K downloads and a 4.8-star rating.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">Bloc</span>
+                            </div>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn project-link">View Project</a>
+                        </div>
+                    </article>
+                    <article class="project-card animate delay-2" data-category="web backend">
+                        <img src="images/project3-placeholder.jpg" alt="Screenshot of E-commerce Platform" class="project-img">
+                        <div class="project-content">
+                            <h3>E-commerce Platform</h3>
+                            <p>Built a comprehensive e-commerce solution with inventory management, payment processing, and an analytics dashboard.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Stripe API</span>
+                            </div>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn project-link">View Project</a>
+                        </div>
+                    </article>
+                     </div>
+            </div>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <div class="container">
+                <h2 id="skills-heading" class="animate">Technical Skills</h2>
+                <div class="skills-container">
+                     <div class="skill-category animate">
+                        <h3>Programming Languages</h3>
+                        <div class="skills-list">
+                            <div class="skill-item"><i class="fab fa-python skill-icon" aria-hidden="true"></i> Python</div>
+                            <div class="skill-item"><i class="fab fa-java skill-icon" aria-hidden="true"></i> Java</div>
+                            <div class="skill-item"><i class="fab fa-js-square skill-icon" aria-hidden="true"></i> JavaScript / TypeScript</div>
+                            <div class="skill-item"><i class="fab fa-golang skill-icon" aria-hidden="true"></i> Golang</div>
+                            </div>
+                    </div>
+                     <div class="skill-category animate delay-1">
+                        <h3>Frameworks & Libraries</h3>
+                        <div class="skills-list">
+                            <div class="skill-item"><i class="fas fa-leaf skill-icon" aria-hidden="true"></i> Spring Boot</div>
+                            <div class="skill-item"><i class="fab fa-react skill-icon" aria-hidden="true"></i> React</div>
+                            <div class="skill-item"><i class="fab fa-node-js skill-icon" aria-hidden="true"></i> Node.js</div>
+                            <div class="skill-item"><i class="fas fa-mobile-alt skill-icon" aria-hidden="true"></i> Flutter</div>
+                             </div>
+                    </div>
+                    <div class="skill-category animate delay-2">
+                        <h3>Cloud & DevOps</h3>
+                        <div class="skills-list">
+                            <div class="skill-item"><i class="fab fa-aws skill-icon" aria-hidden="true"></i> AWS</div>
+                            <div class="skill-item"><i class="fab fa-google skill-icon" aria-hidden="true"></i> GCP</div>
+                             <div class="skill-item"><i class="fab fa-docker skill-icon" aria-hidden="true"></i> Docker</div>
+                            <div class="skill-item"><i class="fas fa-dharmachakra skill-icon" aria-hidden="true"></i> Kubernetes</div>
+                            <div class="skill-item"><i class="fas fa-infinity skill-icon" aria-hidden="true"></i> CI/CD (Jenkins, GitLab CI)</div>
+                             </div>
+                    </div>
+                     <div class="skill-category animate delay-3">
+                        <h3>Databases & Storage</h3>
+                        <div class="skills-list">
+                            <div class="skill-item"><i class="fas fa-database skill-icon" aria-hidden="true"></i> PostgreSQL</div>
+                            <div class="skill-item"><i class="fas fa-database skill-icon" aria-hidden="true"></i> MongoDB</div>
+                            <div class="skill-item"><i class="fas fa-database skill-icon" aria-hidden="true"></i> Redis</div>
+                            <div class="skill-item"><i class="fas fa-database skill-icon" aria-hidden="true"></i> DynamoDB</div>
+                             </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" aria-labelledby="blog-heading">
+            <div class="container">
+                <h2 id="blog-heading" class="animate">Latest Articles</h2>
+                <div class="blog-grid">
+                     <article class="blog-card animate">
+                        <img src="images/blog1-placeholder.jpg" alt="Abstract image representing microservices" class="blog-img">
+                        <div class="blog-content">
+                            <div class="blog-date">June 15, 2023</div>
+                            <h3 class="blog-title"><a href="#">Designing Scalable Microservices Architecture</a></h3>
+                            <p class="blog-excerpt">Learn key principles and best practices for building robust microservices that can scale effectively.</p>
+                            <a href="#" class="read-more-link">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    <article class="blog-card animate delay-1">
+                        <img src="images/blog2-placeholder.jpg" alt="Abstract image representing cloud cost optimization" class="blog-img">
+                        <div class="blog-content">
+                            <div class="blog-date">May 22, 2023</div>
+                            <h3 class="blog-title"><a href="#">Cloud Cost Optimization Strategies</a></h3>
+                            <p class="blog-excerpt">Practical techniques to reduce cloud infrastructure costs without compromising performance.</p>
+                            <a href="#" class="read-more-link">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                     </div>
+                </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <h2 id="contact-heading" class="animate">Get In Touch</h2>
+                <div class="contact-grid">
+                    <div class="contact-info animate">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:mohitkumar@example.com">mohitkumar@example.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                             <div class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>San Francisco Bay Area, CA (Remote Available)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-linkedin" aria-hidden="true"></i></div>
+                            <div class="contact-text">
+                                <h4>LinkedIn</h4>
+                                <p><a href="https://linkedin.com/in/mohitkumar" target="_blank" rel="noopener noreferrer">linkedin.com/in/mohitkumar</a></p>
+                            </div>
+                        </div>
+                         <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-github" aria-hidden="true"></i></div>
+                            <div class="contact-text">
+                                <h4>GitHub</h4>
+                                <p><a href="https://github.com/mohitkumar" target="_blank" rel="noopener noreferrer">github.com/mohitkumar</a></p>
+                            </div>
+                        </div>
+                         </div>
+                    <div class="contact-form animate delay-1">
+                        <form id="contactForm" action="YOUR_FORM_ENDPOINT" method="POST">
+                             <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                             <div class="form-group">
+                                 <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                             <div class="form-group">
+                                 <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Subject">
+                            </div>
+                             <div class="form-group">
+                                 <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                            <p id="form-status" role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2025 Mohit Kumar Verma. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col footer-about">
+                    <h3>Mohit Kumar Verma</h3>
+                     <p>Building innovative software solutions with a focus on scalability, performance, and user experience.</p>
+                </div>
+                <div class="footer-col footer-links-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                         <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-connect">
+                    <h3>Connect</h3>
+                    <div class="footer-social">
+                         <a href="https://github.com/mohitkumar" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/mohitkumar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:mohitkumar@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                 <p>&copy; 2025 Mohit Kumar Verma. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js" defer></script>
+
 </body>
 </html>
