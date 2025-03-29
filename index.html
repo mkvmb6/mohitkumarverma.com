@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit Kumar Verma | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            text-align: center;
+        }
+        header {
+            padding: 50px;
+            background: #161b22;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #58a6ff;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #58a6ff;
+            margin-top: 20px;
+            animation: slideIn 1s ease-in-out;
+        }
+        section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #161b22;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease-in-out;
+            text-align: left;
+        }
+        h2 {
+            border-bottom: 2px solid #58a6ff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .project {
+            background: #21262d;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+        .skills p {
+            background: #21262d;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #161b22;
+            margin-top: 50px;
+        }
+        ul {
+            padding-left: 40px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .contact-icons a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #58a6ff;
+            margin: 10px 0;
+        }
+        .contact-icons i {
+            font-size: 1.5rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mohit Kumar Verma</h1>
+        <p>Software Engineer | 10+ Years Experience</p>
+        <img src="images/profile.jpg" alt="Mohit Kumar Verma" class="profile-img">
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Experienced Software Developer specializing in scalable architectures, backend systems, and cloud solutions. Passionate about coding, problem-solving, and mentoring.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project Name</h3>
+            <p>Brief description of the project. <a href="#">View Project</a></p>
+        </div>
+        <div class="project">
+            <h3>Another Project</h3>
+            <p>Details about another important project. <a href="#">View Project</a></p>
+        </div>
+    </section>
+    
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li><strong>Amazon - SDE 2</strong> (2021 - Present)</li>
+            <li><strong>Previous Companies</strong> (Details of past roles)</li>
+        </ul>
+    </section>
+    
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <p>Python</p>
+        <p>Java</p>
+        <p>Flutter</p>
+        <p>Firebase</p>
+        <p>Cloud Computing</p>
+        <p>WebRTC</p>
+        <p>System Design</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-icons">
+            <a href="mailto:mohitkumar@example.com"><i class="fas fa-envelope"></i> mohitkumar@example.com</a>
+            <a href="https://github.com/mohitkumar" target="_blank"><i class="fab fa-github"></i> github.com/mohitkumar</a>
+            <a href="https://linkedin.com/in/mohitkumar" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/mohitkumar</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Mohit Kumar Verma. All rights reserved.</p>
+    </footer>
+</body>
+</html>
